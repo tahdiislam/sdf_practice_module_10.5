@@ -1,0 +1,57 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% comment %} string join {% endcomment %}
+    <h1>{{str_join | join:"-"}}</h1>
+    {% comment %} default value {% endcomment %}
+    <h1>{{'' | default:"There is nothing"}}</h1>
+    {% comment %} add some value in array but not working {% endcomment %}
+    <h1>{{add_some | add:'[5, 223]'}}</h1>
+    {% comment %} add number {% endcomment %}
+    <h1>{{5 | add:'5'}}</h1>
+    {% comment %} capital letter first {% endcomment %}
+    <h1>{{'hello world' | capfirst}}</h1>
+    {% comment %} Cut Filter {% endcomment %}
+    <h1>{{cut_some | cut:"-"}}</h1>
+    {% comment %} distsort {% endcomment %}
+    <h1>{{dist_sort | dictsort:'name'}}</h1>
+    <h1>{{dist_sort | dictsort:'age'}}</h1>
+    {% comment %} First Filter {% endcomment %}
+    <h1>{{dist_sort | first}}</h1>
+    {% comment %} last Filter {% endcomment %}
+    <h1>{{dist_sort | last}}</h1>
+    {% comment %} Length Filter {% endcomment %}
+    <h1>{{dist_sort | length}}</h1>
+    {% comment %} lower Filter {% endcomment %}
+    <h1>{{lower | lower}}</h1>
+    {% comment %} upper Filter {% endcomment %}
+    <h1>{{lower | upper}}</h1>
+    {% comment %} title Filter {% endcomment %}
+    <h1>{{lower | title}}</h1>
+    {% comment %} random Filter {% endcomment %}
+    <h1>{{dist_sort | random}}</h1>
+    {% comment %} slice Filter {% endcomment %}
+    <h1>{{str_join | slice:3}}</h1>
+    {% comment %} slice Filter {% endcomment %}
+    <h1>{{lower | truncatechars:5}}</h1>
+    {% comment %} Wordcount Filter {% endcomment %}
+    <h1>{{lower | wordcount}}</h1>
+    {% comment %} Truncatewords Filter {% endcomment %}
+    <h1>{{lower | truncatewords:3}}</h1>
+    {% comment %} date Filter {% endcomment %}
+    <h1>{{date | date:"dS M Y"}}</h1>
+    {% comment %} time Filter {% endcomment %}
+    <h1>{{time | time:"H:i"}}</h1>
+    {% comment %} time Filter {% endcomment %}
+    <h1>{{date | timesince}}</h1>
+
+    <h1>This is first app root page</h1>
+  </body>
+</html>
